@@ -83,4 +83,4 @@ Wasze testy muszą pokryć co najmniej te przypadki:
 1.  Sklonujcie to repozytorium na dysk przez użycie **USE TEMPLATE** (`git clone ...`)
 2.  Dodajcie Webhooka w ustawieniach repozytorium (link na Discordzie).
 3.  Ustalcie podział ról na Discordzie.
-4.  Powodzenia! Niech kod będzie z Wami! 💻
+4.  Powodzenia! Niech kod będzie z Wami! 💻.
