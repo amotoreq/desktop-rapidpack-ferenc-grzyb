@@ -28,6 +28,17 @@
                       RowDefinitions="Auto,Auto,Auto,Auto,Auto"
                       ColumnSpacing="-140"
                       RowSpacing="10">
+                    
+                    <TextBlock Text="Podaj wymiary w cm:"
+                               Grid.Row="0" Grid.Column="0"
+                               Foreground="#271D11"
+                               FontSize="25"/>
+
+                    <TextBlock Text="Wysokość:"
+                               Grid.Row="1" Grid.Column="0"
+                               Foreground="#271D11"
+                               FontSize="20"/>
+                    <TextBox Grid.Row="1" Grid.Column="1" Width="125" x:Name="Wysokosc"/>
 
                     
                 </Grid>
