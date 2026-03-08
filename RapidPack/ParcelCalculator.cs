@@ -4,10 +4,32 @@ namespace RapidPack.Classes;
 
 public class ParcelCalculator
 {
-    public int CalculatePrice(int szerokosc, int wysokosc,int glebokosc, int waga, bool expres, int wyborDostawy)
+    public int CalculatePrice(int szerokosc, int wysokosc,int glebokosc, int waga, bool expres, int typPrzesylki)
     {
-        int cena = 10;
+        double cena = 10.0;
 
-        return cena;
+        cena = cena + waga * 2;
+
+        if (expres)
+        {
+            cena += 15;
+        }
+
+        if (typPrzesylki == 1)
+        {
+            cena += 10;
+        }
+
+        if (szerokosc + wysokosc + glebokosc > 150)
+        {
+            cena *= 1.5;
+        }
+        if (typPrzesylki == 2)
+        {
+            cena = 100;
+        }
+
+        Math.Floor(cena);
+        return (int)cena; 
     }
 }
