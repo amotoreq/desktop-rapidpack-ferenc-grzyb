@@ -46,6 +46,12 @@
                                FontSize="20"/>
                     <TextBox Grid.Row="2" Grid.Column="1" Width="125" x:Name="Szerokosc"/>
 
+                    <TextBlock Text="Głębokość:"
+                               Grid.Row="3" Grid.Column="0"
+                               Foreground="#271D11"
+                               FontSize="20"/>
+                    <TextBox Grid.Row="3" Grid.Column="1" Width="125" x:Name="Glebokosc"/>
+
                     
                 </Grid>
 
