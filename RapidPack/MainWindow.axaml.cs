@@ -30,9 +30,17 @@ public partial class MainWindow : Window
             int waga = int.Parse(Waga.Text);
             bool czyEkspres = Ekspres.IsChecked ?? false;
             int typPrzesylki = TypPrzesylki.SelectedIndex;
-            
-            int cenaPaczki = parcelCalculator.CalculatePrice(szerokosc, wysokosc, glebokosc, waga, czyEkspres, typPrzesylki);
-            wycen.Text = cenaPaczki.ToString();
+
+            if (waga <= 30)
+            {
+                int cenaPaczki = parcelCalculator.CalculatePrice(szerokosc, wysokosc, glebokosc, waga, czyEkspres, typPrzesylki);
+                wycen.Text = cenaPaczki.ToString();
+            }
+            else
+            {
+                
+                wycen.Text = "Paczka za ciężka";
+            }
         }
     }
 
