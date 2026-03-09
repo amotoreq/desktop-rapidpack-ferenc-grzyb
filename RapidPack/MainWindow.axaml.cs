@@ -28,28 +28,30 @@ public partial class MainWindow : Window
             int szerokosc = int.Parse(Szerokosc.Text);
             int glebokosc = int.Parse(Glebokosc.Text);
             int waga = int.Parse(Waga.Text);
-            bool czyEkspres = Ekspres.IsChecked ?? false;
+            bool ekspres = Ekspres.IsChecked ?? false;
             int typPrzesylki = TypPrzesylki.SelectedIndex;
 
             if (waga <= 30)
             {
-                int cenaPaczki = parcelCalculator.CalculatePrice(szerokosc, wysokosc, glebokosc, waga, czyEkspres, typPrzesylki);
-                wycen.Text = cenaPaczki.ToString();
+                int cenaPaczki = parcelCalculator.CalculatePrice(szerokosc, wysokosc, glebokosc, waga, ekspres, typPrzesylki);
+                Koszt.Text = cenaPaczki.ToString();
 
                 if (Ekspres.IsChecked == true)
                 {   
-                    wycen.Text = $"Paczka o wymiarach {wysokosc}x{szerokosc}x{glebokosc} o wadze {waga}kg \n Z opcją ekspresową oraz typem {TypPrzesylki.Text} \n Wynosi {cenaPaczki}zł";
+                    Koszt.Text = $"Paczka o wymiarach {wysokosc}x{szerokosc}x{glebokosc} o wadze {waga}kg \n Z opcją ekspresową oraz typem {TypPrzesylki.Text} \n Wynosi {cenaPaczki}zł";
                 }
                 else
                 {
-                    wycen.Text = $"Paczka o wymiarach {wysokosc}x{szerokosc}x{glebokosc} o wadze {waga}kg \n Z typem {TypPrzesylki.Text} \n Wynosi {cenaPaczki}zł";
+                    Koszt.Text = $"Paczka o wymiarach {wysokosc}x{szerokosc}x{glebokosc} o wadze {waga}kg \n Z typem {TypPrzesylki.Text} \n Wynosi {cenaPaczki}zł";
                 }
+                
+                
                 
             }
             else
             {
                 
-                wycen.Text = "Paczka za ciężka";
+                Koszt.Text = "Paczka za ciężka";
             }
         }
     }
