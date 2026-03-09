@@ -35,6 +35,16 @@ public partial class MainWindow : Window
             {
                 int cenaPaczki = parcelCalculator.CalculatePrice(szerokosc, wysokosc, glebokosc, waga, czyEkspres, typPrzesylki);
                 wycen.Text = cenaPaczki.ToString();
+
+                if (Ekspres.IsChecked == true)
+                {   
+                    wycen.Text = $"Paczka o wymiarach {wysokosc}x{szerokosc}x{glebokosc} o wadze {waga}kg \n Z opcją ekspresową oraz typem {TypPrzesylki.Text} \n Wynosi {cenaPaczki}zł";
+                }
+                else
+                {
+                    wycen.Text = $"Paczka o wymiarach {wysokosc}x{szerokosc}x{glebokosc} o wadze {waga}kg \n Z typem {TypPrzesylki.Text} \n Wynosi {cenaPaczki}zł";
+                }
+                
             }
             else
             {
