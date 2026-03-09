@@ -106,7 +106,7 @@
             <Button Content="Wyceń"
                     Grid.Row="0"
                     Height="50"
-                    Width="140"
+                    Width="150"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Top"
                     HorizontalContentAlignment="Center"
@@ -116,18 +116,26 @@
                     FontWeight="SemiBold"
                     Background="#B38551"
                     Foreground="#271D11"
-                    x:Name="Wycen"/>
+                    x:Name="Wycen"
+                    Click="CalculatePrice"
+                    />
             
             <TextBlock
                 x:Name="Koszt"
-                Text=""
+                Text="Paczka o wymiarach 20x30x40 o wadze 25kg
+                Z opcją ekspresową oraz typem paleta
+                Wynosi 2137zł"
                 Grid.Row="1"
                 Height="100"
-                Width="70"
+                Width="500"
+                TextAlignment="Center"
+                TextWrapping="Wrap"
                 HorizontalAlignment="Center"
                 Padding="10"
-                FontSize="25"
-            ></TextBlock>
+                FontSize="20"
+            >
+                
+            </TextBlock>
 
         </Grid>
 
