@@ -4,7 +4,7 @@ namespace RapidPack.Classes;
 
 public class ParcelCalculator
 {
-    public int CalculatePrice(int szerokosc, int wysokosc,int glebokosc, int waga, bool expres, int typPrzesylki)
+    public static int CalculatePrice(int szerokosc, int wysokosc,int glebokosc, int waga, bool expres, int typPrzesylki)
     {
         double cena = 10.0;
 
